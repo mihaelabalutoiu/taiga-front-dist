@@ -26,8 +26,8 @@ var branch = process.argv[2];
 
 var synchRepoAction = (function cloneOrPull(){
     return fs.existsSync(local)
-        ? 'git checkout ' + branch + ' && cd ' + local + ' && git checkout ' + branch + ' && git pull'
-        : 'git checkout ' + branch + ' && git clone -b ' + branch + '  ' + repo + ' ' + local;
+        ? ' cd ' + local + 'git fetch && git checkout ' + branch + ' && git pull origin' + branch
+        : 'git clone -b ' + branch + '  ' + repo + ' ' + local;
 }())
 
 _exec(synchRepoAction)
