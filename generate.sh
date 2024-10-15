@@ -4,5 +4,5 @@
 #
 # Copyright (c) 2021-present Kaleidos INC
 
-git checkout stable; node dist.js stable
+git checkout new-release; node dist.js add-custom-fields
 
